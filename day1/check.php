@@ -1,16 +1,16 @@
 <?php
 
-$user= $_POST['userName'];
+$user= $_REQUEST['userName'];
 
-$passkey=$_POST['userPassword'];
+$passkey=$_REQUEST['userPassword'];
 
 
 
 
 if($user=="admin" && $passkey=="Admin@123"){
-    echo "<b>" .$user. "</b>";
 
-    echo "<br> <b>". $passkey ."</b>";    
+    header("Location:dashboard.php");
+
 }else{
     echo "User is not valid";
 }
